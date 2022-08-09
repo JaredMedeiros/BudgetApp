@@ -18,9 +18,10 @@ const Form = () => {
     const { addTransaction } = useContext(ExpenseTrackerContext);
 
     const createTransaction = () => {
-        const transaction = { ... formData, amount: Number(formData.amount), id: uuidv4()}
+        const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4()}
 
-        addTransaction()
+        addTransaction(transaction);
+        setFromData(initialState)
     }
 
     console.log(formData);
@@ -35,7 +36,7 @@ const Form = () => {
             <Grid item xs={6}>
                 <FormControl fullWidth>
                     <InputLabel>Type</InputLabel>
-                    <Select value={formData.type} onChange={(e) => setFromData({ ... formData, type: e.target.value })}>
+                    <Select value={formData.type} onChange={(e) => setFromData({ ...formData, type: e.target.value })}>
                         <MenuItem value="Income">Income</MenuItem>
                         <MenuItem value="Expense">Expense</MenuItem>
                     </Select>
@@ -44,17 +45,17 @@ const Form = () => {
             <Grid item xs={6}>
                 <FormControl fullWidth>
                     <InputLabel>Category</InputLabel>
-                    <Select value={formData.category} onChange={(e) => setFromData({ ... formData, category: e.target.value })}>
+                    <Select value={formData.category} onChange={(e) => setFromData({ ...formData, category: e.target.value })}>
                         <MenuItem value="business">Business</MenuItem>
                         <MenuItem value="salary">Salary</MenuItem>
                     </Select>
                 </FormControl>
             </Grid>
             <Grid item xs={6}>
-                <TextField type="number" label="Amount" fullWidth value={formData.amount} onchange={(e) => setFromData({ ... formData, amount: e.target.value })} />
+                <TextField type="number" label="Amount" fullWidth value={formData.amount} onchange={(e) => setFromData({ ...formData, amount: e.target.value })} />
             </Grid>
             <Grid item xs={6}>
-                <TextField type="dater" label="Date" fullWidth value={formData.date} onchange={(e) => setFromData({ ... formData, date: e.target.value })} />
+                <TextField type="dater" label="Date" fullWidth value={formData.date} onchange={(e) => setFromData({ ...formData, date: e.target.value })} />
             </Grid>
             <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>Create</Button>
         </Grid>
