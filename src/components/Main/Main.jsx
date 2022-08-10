@@ -16,9 +16,9 @@ const Main = () => {
             <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
             <CardContent>
                 <Typography align="center" variant="h5">Total Balance ${balance}</Typography>
-                <Typography variant="subtitle1" styles={{lineHeight: '1.5em', marginTop: '20px'}}>
+                {/* <Typography variant="subtitle2" styles={{lineHeight: '1.5em', marginTop: '20px'}}>
                     <InfoCard />
-                </Typography>
+                </Typography> */}
                 <Divider className={classes.divider}/>
                 <Form />
             </CardContent>

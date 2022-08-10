@@ -4,8 +4,5 @@
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assets/backgroundimage.jpeg);
-    background-size: cover;
-    background-position: center;
-    image-rendering: -webkit-optimize-contrast;
+    background: black!important
 }
