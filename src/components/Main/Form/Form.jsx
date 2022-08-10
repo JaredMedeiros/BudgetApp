@@ -7,7 +7,6 @@ import { useSpeechContext } from '@speechly/react-client'
 import formatDate from '../../../utils/formatDate';
 import useStyles from './styles';
 import { incomeCategories, expenseCategories } from '../../../constants/categories';
-import { SettingsInputComponentSharp } from '@material-ui/icons';
 import CustomizedSnackbar from '../../Snackbar/Snackbar';
 
 

@@ -8,7 +8,9 @@ const CustomizedSnackbar = ({ open, setOpen }) => {
     const classes = useStyles();
 
     const handleClose = (event, reason) => {
-        if(reason === 'clickaway') return;
+        if(reason === 'clickaway') {
+        return;
+        }
 
         setOpen(false)
     }
@@ -17,8 +19,8 @@ const CustomizedSnackbar = ({ open, setOpen }) => {
         <div className = {classes.root}>
             <Snackbar
                 anchorOrigin={{vertical:'top', horizontal:'right'}}
-                open={true}
-                autoHideDuration={3000}
+                open={open}
+                autoHideDuration={6000}
                 onClose={handleClose}
             >
                 <MuiAlert onClose={handleClose} severity="success" elevation={6} variant="filled">
