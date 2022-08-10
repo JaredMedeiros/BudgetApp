@@ -5,7 +5,6 @@ import { ExpenseTrackerContext } from '../../context/context'
 import useStyles from './styles'
 import Form from './Form/Form';
 import List from './List/List'
-import InfoCard from '../InfoCard';
 
 const Main = () => {
     const classes = useStyles();
